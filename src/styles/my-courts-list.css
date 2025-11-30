@@ -1,0 +1,168 @@
+/* Container */
+
+.my-courts {
+  padding: 14px 16px 12px;
+  border-radius: 16px;
+  background: var(--gray-a2);
+  border: 1px solid var(--gray-a4);
+}
+
+/* Header */
+
+.my-courts__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.my-courts__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.my-courts__subtitle {
+  margin: 2px 0 0;
+}
+
+.my-courts__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Content */
+
+.my-courts__content {
+  margin-top: 10px;
+}
+
+/* Skeletons */
+
+.my-courts__skeleton-list {
+  display: grid;
+  gap: 10px;
+}
+
+.my-courts__skeleton-card {
+  height: 84px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: my-courts-skeleton 1.6s ease-in-out infinite;
+}
+
+@keyframes my-courts-skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* States */
+
+.my-courts__empty {
+  padding: 12px 2px;
+}
+
+.my-courts__error {
+  padding: 12px 2px;
+}
+
+/* List */
+
+.my-courts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Court card tweaks for compact mode */
+
+.court-card--compact {
+  padding: 8px 10px;
+  border-radius: 14px;
+  cursor: default;
+}
+
+.court-card--compact .court-left {
+  gap: 10px;
+}
+
+.court-card--compact .avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 0.85rem;
+}
+
+.court-card--compact .court-title {
+  font-size: 0.95rem;
+}
+
+.court-card--compact .court-sub {
+  font-size: 0.78rem;
+  max-width: 430px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-courts__description {
+  opacity: 0.9;
+}
+
+/* Stats section: slightly smaller */
+
+.my-courts__stats .stat-row {
+  margin-bottom: 4px;
+}
+
+.my-courts__stats .stat-label {
+  font-size: 0.75rem;
+}
+
+.my-courts__stats .stat-pill {
+  font-size: 0.78rem;
+  padding-inline: 8px;
+}
+
+/* Actions */
+
+.my-courts__actions {
+  justify-content: flex-end;
+}
+
+.my-courts__actions .btn {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+  .my-courts {
+    padding-inline: 12px;
+  }
+
+  .court-card--compact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .court-card--compact .court-divider {
+    display: none;
+  }
+
+  .court-card--compact .court-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .my-courts__actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

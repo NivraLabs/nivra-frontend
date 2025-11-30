@@ -1,0 +1,180 @@
+.my-cases {
+  padding: 14px 16px 12px;
+  border-radius: 16px;
+}
+
+/* Header */
+
+.my-cases__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.my-cases__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.my-cases__subtitle {
+  margin: 2px 0 0;
+}
+
+.my-cases__header-meta {
+  white-space: nowrap;
+}
+
+/* Content wrapper */
+
+.my-cases__content {
+  margin-top: 10px;
+}
+
+/* Skeletons */
+
+.my-cases__skeleton-list {
+  display: grid;
+  gap: 10px;
+}
+
+.my-cases__skeleton-card {
+  height: 70px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: my-cases-skeleton 1.6s ease-in-out infinite;
+}
+
+@keyframes my-cases-skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* States */
+
+.my-cases__error,
+.my-cases__empty {
+  padding: 12px 2px;
+}
+
+/* List */
+
+.my-cases__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Item */
+
+.my-cases__item {
+  cursor: default;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.my-cases__item-main {
+  min-width: 0;
+}
+
+.my-cases__item-title {
+  font-size: 0.95rem;
+}
+
+.my-cases__item-desc {
+  margin-top: 4px;
+  max-width: 460px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-cases__item-meta-row {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.my-cases__deadline {
+  opacity: 0.9;
+}
+
+/* Right side */
+
+.my-cases__item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+/* Status pill */
+
+.my-cases__status {
+  text-transform: capitalize;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--gray-a3);
+  color: var(--gray-a11);
+}
+
+.my-cases__status--evidence {
+  background: color-mix(in srgb, var(--teal-dark) 10%, #ecfeff);
+  border-color: color-mix(in srgb, var(--teal-dark) 40%, #ecfeff);
+  color: var(--teal-dark);
+}
+
+.my-cases__status--voting {
+  background: color-mix(in srgb, #ca8a04 12%, #fef9c3);
+  border-color: color-mix(in srgb, #ca8a04 45%, #fef9c3);
+  color: #854d0e;
+}
+
+.my-cases__status--appeal {
+  background: color-mix(in srgb, #7c3aed 12%, #ede9fe);
+  border-color: color-mix(in srgb, #7c3aed 45%, #ede9fe);
+  color: #4c1d95;
+}
+
+.my-cases__status--closed {
+  background: var(--gray-a3);
+  border-color: var(--gray-a6);
+  color: var(--gray-a11);
+}
+
+/* Button */
+
+.my-cases__view-btn {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .my-cases {
+    padding-inline: 12px;
+  }
+
+  .my-cases__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .my-cases__item-right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

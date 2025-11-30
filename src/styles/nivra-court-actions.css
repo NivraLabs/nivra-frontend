@@ -1,0 +1,140 @@
+/* NivraCourtActions.css */
+
+.court-actions {
+  width: 100%;
+}
+
+/* Sections */
+
+.court-actions__section {
+  background: radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--teal-dark) 6%, transparent),
+      transparent 55%
+    ),
+    var(--gray-a2);
+  border-radius: var(--radius-3);
+  padding: 16px 14px;
+  border: 1px solid var(--gray-a4);
+}
+
+/* Divider between sections */
+
+.court-actions__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--gray-a5);
+  margin-block: 8px;
+}
+
+/* Evidence cards */
+
+.court-actions__evidence-card {
+  border-left: 3px solid var(--teal-dark);
+  padding: 10px 12px;
+  background: var(--color-panel);
+}
+
+.court-actions__evidence-item {
+  border-radius: var(--radius-2);
+  border: 1px solid var(--gray-a5);
+  padding: 8px 10px;
+  background: var(--gray-a1);
+}
+
+/* Empty state */
+
+.court-actions__empty-card {
+  border-radius: var(--radius-2);
+  padding: 12px;
+  background: var(--gray-a1);
+}
+
+/* Voting buttons */
+
+.court-actions__vote-grid {
+  margin-top: 4px;
+}
+
+.court-actions__vote-btn {
+  min-width: 140px;
+}
+
+.court-actions__vote-btn--active {
+  border-color: var(--teal-dark);
+  color: var(--teal-dark);
+  background: color-mix(in srgb, var(--teal-dark) 7%, transparent);
+}
+
+.court-actions__vote-btn--active:hover {
+  background: color-mix(in srgb, var(--teal-dark) 18%, transparent);
+}
+
+.court-actions__vote-btn--disabled {
+  background: var(--gray-a5) !important;
+  color: var(--gray-11);
+  cursor: default;
+}
+
+/* Action buttons row */
+
+.court-actions__action-row {
+  justify-content: flex-end;
+}
+
+.court-actions__cta-btn {
+  border-color: var(--teal-dark);
+  background: var(--teal-dark);
+  color: white;
+}
+
+.court-actions__cta-btn:hover {
+  background: color-mix(in srgb, var(--teal-dark) 85%, black 15%);
+}
+
+.court-actions__cta-btn--secondary {
+  background: transparent;
+  color: var(--teal-dark);
+}
+
+.court-actions__cta-btn--secondary:hover {
+  background: color-mix(in srgb, var(--teal-dark) 6%, transparent);
+}
+
+.court-actions__cta-btn--danger {
+  border-color: #b91c1c;
+  background: #b91c1c;
+}
+
+.court-actions__cta-btn--danger:hover {
+  background: #7f1d1d;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+  .court-actions__section {
+    padding: 12px 10px;
+  }
+
+  .court-actions__evidence-card {
+    padding: 8px 10px;
+  }
+
+  .court-actions__action-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .court-actions__action-row .rt-Button {
+    width: 100%;
+  }
+
+  .court-actions__vote-grid {
+    justify-content: stretch;
+  }
+
+  .court-actions__vote-btn {
+    flex: 1 1 100%;
+  }
+}

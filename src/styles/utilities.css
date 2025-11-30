@@ -1,0 +1,36 @@
+.center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.gap-2 {
+  gap: 8px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #f4f5f6;
+  margin: 12px 0;
+}
+.create-badge,
+.filter-badge {
+  position: relative;
+  z-index: 40;
+  display: inline-block;
+}
+.btn {
+  z-index: 50;
+}
+.card,
+.proposal,
+.proposals-list,
+.rewards-inner,
+.rewards-right,
+.proposal-meta,
+.actions {
+  min-width: 0;
+}

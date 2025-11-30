@@ -1,0 +1,273 @@
+.faucet {
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.faucet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.faucet-header-main h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.faucet-header-main p {
+  margin: 4px 0 0;
+}
+
+.faucet-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faucet-wallet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.faucet-wallet-address {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gray-a2);
+}
+
+.faucet-wallet--disconnected {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px dashed var(--gray-a5);
+}
+
+.faucet-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.faucet-banner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.faucet-banner--error {
+  border-left: 3px solid #ef4444;
+}
+
+.faucet-banner--error .faucet-banner-dot {
+  background: #ef4444;
+}
+
+.faucet-banner--warning {
+  border-left: 3px solid #f97316;
+}
+
+.faucet-banner--warning .faucet-banner-dot {
+  background: #f97316;
+}
+
+.faucet-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.faucet-card {
+  padding: 16px 18px;
+  border-radius: 16px;
+}
+
+.faucet-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.faucet-card-header h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.faucet-chip {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--teal-dark) 10%, #ecfeff);
+  color: var(--teal-dark);
+}
+
+.faucet-card--balance {
+  background: radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--teal-dark) 8%, transparent),
+      transparent 45%
+    ),
+    var(--card-bg, #fff);
+}
+
+.faucet-balance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.faucet-balance-amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.faucet-balance-label {
+  font-size: 0.78rem;
+  color: var(--gray-a11);
+  opacity: 0.9;
+}
+
+.faucet-balance-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.faucet-balance-unit {
+  font-size: 0.78rem;
+  color: var(--gray-a11);
+}
+
+.faucet-balance-meta {
+  text-align: right;
+}
+
+.faucet-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--gray-a2);
+}
+
+.faucet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faucet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faucet-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faucet-input-row {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--gray-a5);
+  overflow: hidden;
+  background: #fff;
+}
+
+.faucet-input {
+  flex: 1;
+  border: none;
+  padding: 6px 10px;
+  font: inherit;
+  outline: none;
+  min-width: 0;
+}
+
+.faucet-input-suffix {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  background: var(--gray-a2);
+  color: var(--gray-a11);
+  border-left: 1px solid var(--gray-a5);
+}
+
+.faucet-field-hint {
+  margin-top: 2px;
+}
+
+.faucet-submit-btn {
+  align-self: flex-start;
+}
+
+.faucet-divider {
+  height: 1px;
+  background: var(--gray-a3);
+  margin: 4px 0;
+}
+
+.faucet-claim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faucet-claim-text {
+  flex: 1;
+}
+
+.faucet-claim-btn {
+  white-space: nowrap;
+}
+
+.faucet-helper {
+  margin: 4px 0 0;
+}
+
+@media (max-width: 900px) {
+  .faucet-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .faucet-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faucet-header-right {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+
+  .faucet-claim {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faucet-claim-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .faucet-submit-btn {
+    width: 100%;
+  }
+}

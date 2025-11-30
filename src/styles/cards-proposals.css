@@ -1,0 +1,74 @@
+.card {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  min-width: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  min-width: 0;
+}
+.proposal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  background: white;
+  min-width: 0;
+}
+.proposal > div:first-child {
+  min-width: 0;
+  overflow: hidden;
+}
+.proposal-title {
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+}
+.proposal-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+.votes {
+  text-align: right;
+  min-width: 64px;
+}
+.status {
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.status.voting {
+  background: #e6fffe;
+  color: var(--teal-dark);
+}
+.status.pending {
+  background: #f4f6f8;
+  color: var(--muted);
+}
+.status.accepted {
+  background: #e8fff6;
+  color: green;
+}

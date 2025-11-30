@@ -1,0 +1,55 @@
+.card > .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+.dashboard-columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.main-column {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+.aside-column {
+  flex: 0 0 340px;
+  max-width: 340px;
+  min-width: 0;
+}
+@media (max-width: 1100px) {
+  .aside-column {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .dashboard-columns {
+    flex-direction: column;
+  }
+  .aside-column {
+    flex: 1 1 auto;
+    max-width: 100%;
+    order: 2;
+  }
+  .main-column {
+    order: 1;
+  }
+}
+.dashboard-columns .card,
+.dashboard-columns .proposal,
+.dashboard-columns .rewards-inner {
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  .main-column > * + * {
+    margin-top: 16px;
+  }
+  .aside-column > * + * {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,15 @@
+:root {
+  --teal-dark: #463986;
+  --teal-light: #746aa4;
+  --coral: #ff6b61;
+  --sand: #f6f4f2;
+  --neutral: #1f2d33;
+  --muted: #606f76;
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --container-max: 1200px;
+  --gap: 20px;
+  --shadow-1: 0 6px 20px rgba(20, 22, 24, 0.06);
+  --shadow-2: 0 10px 30px rgba(2, 6, 23, 0.12);
+  --glass: rgba(255, 255, 255, 0.6);
+}

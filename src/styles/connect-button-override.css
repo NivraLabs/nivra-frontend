@@ -1,0 +1,103 @@
+:root {
+  --badge-start: #463986;
+  --badge-end: #7b55c9;
+}
+
+button[data-dapp-kit][aria-haspopup="dialog"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 34px !important;
+  min-width: 88px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--neutral) !important;
+  border: none !important;
+  box-shadow: 0 6px 18px rgba(20, 22, 24, 0.06) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: transform 0.06s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+button[data-dapp-kit][aria-haspopup="dialog"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.12);
+}
+button[data-dapp-kit][aria-haspopup="dialog"]:focus {
+  outline: 3px solid rgba(70, 57, 134, 0.12);
+  outline-offset: 2px;
+}
+
+button[data-dapp-kit][aria-haspopup="menu"],
+button[data-dapp-kit][class*="connectedAccount"],
+button[data-dapp-kit][id^="radix-"][aria-haspopup="menu"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding-left: 45px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 34px !important;
+  min-width: 88px !important;
+  border-radius: 8px !important;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #eef2f4 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(2, 6, 23, 0.04) !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+}
+
+button[data-dapp-kit][aria-haspopup="menu"] svg,
+button[data-dapp-kit][aria-haspopup="menu"] .chev {
+  width: 16px !important;
+  height: 16px !important;
+  stroke: #a0b6c3 !important;
+  fill: none !important;
+  flex-shrink: 0 !important;
+}
+
+.desktop-connect button div {
+  color: var(--neutral) !important;
+}
+
+button[data-dapp-kit][aria-haspopup="menu"]::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--badge-start), var(--badge-end));
+  box-shadow: 0 6px 14px rgba(70, 57, 134, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 0;
+  flex-shrink: 0;
+  display: block;
+}
+
+button[data-dapp-kit] {
+  position: relative;
+}
+
+.desktop-connect button svg {
+  display: none;
+}
+
+.sidebar-actions {
+  width: 100%;
+}
+
+.sidebar-actions div button {
+  width: 100%;
+}
